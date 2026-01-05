@@ -1,0 +1,13 @@
+Explain why we use Tuples for GPS data but Lists for Shopping Carts.
+
+GPS Data uses Tuples because:
+- Coordinates (latitude, longitude) are fixed values that shouldn't change
+- Tuples are immutable - preventing accidental modification
+- A location at (40.7128, -74.0060) should always remain that exact point
+- Immutability provides data integrity and safety
+
+Shopping Carts use Lists because:
+- Items need to be added, removed, or modified frequently
+- Lists are mutable - allowing dynamic updates
+- Users constantly change cart contents (add items, remove items, update quantities)
+- Flexibility is more important than immutability for this use case
