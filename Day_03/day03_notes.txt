@@ -1,0 +1,7 @@
+# List had to search through every single number until it reached 10 million
+# Time Complexity: O(n) - Linear Time
+
+# Dictionary used a Hash Function (a mathematical formula) to calculate the exact
+# memory location of the number 9,999,999 and jumped directly to it.
+# Time Complexity: O(1) - Constant Time
+# This is why dictionaries are preferred for database lookups.

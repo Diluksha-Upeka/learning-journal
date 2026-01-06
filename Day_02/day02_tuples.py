@@ -19,8 +19,8 @@ print(tuple_2)
 # NO methods like append, insert, remove, pop, sort, reverse for tuples
 
 # Size comparison
-print(sys.getsizeof(modules_1))  # Size of modules_1 in bytes
-print(sys.getsizeof(tuple_1))  # Size of tuple_1 in bytes
+print(sys.getsizeof(modules_1))  # Size of modules_1 in bytes - list has more overhead (104)
+print(sys.getsizeof(tuple_1))  # Size of tuple_1 in bytes - tuple has less overhead (80)
 
 # Speed comparison
 lists_time =timeit.timeit(stmt = "modules = ['a', 'b', 'c', 'd', 'e']", number = 1000000)
