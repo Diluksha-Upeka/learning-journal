@@ -35,3 +35,19 @@ courses = ['Math', 'Science', 'Art']
 info = {'name': 'Charlie', 'age': 23}
 student_info(*courses, **info)
 
+# ARGS VS KWARGS
+
+# Without args and kwargs
+    # Not flexible, fixed number of parameters
+    # Not suitable for rapid development
+
+# *args
+    # Flexible number of positional arguments
+    # values
+    # Tuple data type - ordered, indexed, immutable
+    # Use when number of inputs is unknown
+
+# **kwargs
+    # Flexible number of keyword arguments
+    # key-value pairs
+    # Dictionary data type - unordered, key-value pairs, mutable
