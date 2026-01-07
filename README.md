@@ -28,6 +28,8 @@ This learning journal serves as:
 ## Recent Entries
 
 - Day 02 - Lists, Tuples, and Sets
+- Day 03 - Dictionaries
+- Day 04 - Functions, *args and **kwargs
 ---
 
-*Last updated: 5th of January*
+*Last updated: 7th of January*
