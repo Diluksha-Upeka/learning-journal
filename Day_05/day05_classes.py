@@ -40,3 +40,33 @@ print(emp_2.fullname())
 # Alternative way to call method
 Employee.fullname(emp_1) # calling method using class name and passing instance
 Employee.fullname(emp_2)
+
+
+# CLASS VARIABLES
+# shared across all instances of a class
+# Same for all instances of a class
+
+class Employee2:
+
+    num_of_emps = 0  # CLASS VARIABLE
+    raise_amount = 1.05  # CLASS VARIABLE
+    def __init__(self, first = "", last = "", pay = 0):
+        self.first = first
+        self.last = last
+        self.email = first + "." + last + "@company.com"
+        self.pay = pay
+        Employee2.num_of_emps += 1  # incrementing class variable
+
+    def apply_raise(self):
+        self.pay = int(self.pay * self.raise_amount)  # using class variable
+
+emp_3 = Employee2('Emily', 'Davis', 70000)
+emp_4 = Employee2('Michael', 'Brown', 80000)
+
+emp_3.raise_amount = 1.10  # instance variable, only for emp_3 instance
+
+print(emp_3.pay)
+emp_3.apply_raise() # raise amount is accessed via class variable
+print(emp_3.pay)
+
+print(Employee2.num_of_emps) # accessing class variable via class name
