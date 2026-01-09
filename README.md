@@ -30,6 +30,7 @@ This learning journal serves as:
 - Day 02 - Lists, Tuples, and Sets
 - Day 03 - Dictionaries
 - Day 04 - Functions, *args and **kwargs
+- Day 05 - Classes, Objects and Class Variables
 ---
 
-*Last updated: 7th of January*
+*Last updated: 9th of January*
