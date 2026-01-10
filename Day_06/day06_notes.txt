@@ -1,0 +1,33 @@
+Day 06 – Inheritance Notes
+
+- Inheritance lets a class (child/subclass) reuse and extend another class (parent/superclass).
+- The child gets the parent’s attributes and methods automatically.
+
+- Syntax: class Child(Parent):
+- If you don’t specify a parent, Python uses object as the default parent.
+
+**Initializers and super()
+- If the parent class has __init__, call it from the child with super().__init__(...).
+- Forgetting super() is a common source of bugs (missing attributes).
+
+**Method overriding
+- A child can redefine a method from the parent using the same name.
+- Use overriding when behavior should be similar but slightly different.
+- If you still want the parent behavior, call super().method_name(...) inside the override.
+
+**Attribute and method lookup
+- When you access obj.attr, Python searches:
+	child class → parent classes (following MRO) → object.
+- If not found anywhere, you get an AttributeError.
+
+**Multiple inheritance (use sparingly)
+- A class can inherit from more than one parent: class Child(A, B):
+- This increases complexity; only use when there is a clear need.
+- Python uses Method Resolution Order (MRO) to decide which parent to use first.
+
+**When to use inheritance
+- When multiple classes share common behavior and data.
+- When you want to specialize a more general class (BaseShape → Circle, Rectangle).
+- Avoid deep inheritance chains (hard to understand and maintain).
+
+
