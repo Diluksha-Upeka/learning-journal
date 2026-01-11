@@ -32,6 +32,7 @@ This learning journal serves as:
 - Day 04 - Functions, *args and **kwargs
 - Day 05 - Classes, Objects and Class Variables
 - Day 06 - Inheritance
+- Day 07 - Weekly Recap
 ---
 
-*Last updated: 10th of January*
+*Last updated: 11th of January*
