@@ -20,3 +20,17 @@ print(is_leap_year(2020))  # True
 
 print(days_in_month(2020, 2))  # 29
 print(days_in_month(2021, 2))  # 28
+
+
+# ARGS AND KWARGS EXPLANATION
+# *args and **kwargs allow you to pass a variable number of arguments to a function.
+# *args is used to pass a variable number of non-keyword arguments (positional arguments) to a function.
+# **kwargs is used to pass a variable number of keyword arguments (named arguments) to a function.
+
+# postional arguments
+# def add(a, b):
+#     return a + b
+
+# named arguments
+# def introduce(name, age):
+#     return f"Hi, my name is {name} and I'm {age} years old."

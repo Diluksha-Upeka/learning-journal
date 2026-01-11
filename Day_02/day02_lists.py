@@ -38,27 +38,29 @@ print(modules)
 # modules.reverse()
 # print(modules)
 
-modules.sort()
+modules.sort() # Sorts the list in place in ascending order
 print(modules)
 
 nums = [5, 2, 9, 1, 5, 6]
 nums.sort()  # for descending order use nums.sort(reverse=True)
 print(nums)
 
-# When you don't want to modify the original list
+# When you don't want to modify the original list use sorted()
 sorted_modules = sorted(modules)  # returns a new sorted list
 print(sorted_modules)
 
-print(min(nums))
+# Min, Max, Sum of a list
+print(min(nums)) 
 print(max(nums))
 print(sum(nums))
 
-# Finding the index of an element
+# Finding the index of an element .index() and checking membership with 'in'
 print(modules.index('DSA'))
 print('DSA' in modules)  # Check if 'DSA' is in the list
 
-# Iterating through a list
+# Iterating through a list using for loop
 for index, item in enumerate(modules, start=1):  # enumerate returns a tuple of index and value for each item in the modules:
+    # number and item
     print(index,item) 
 
 module_str = ' -  '.join(modules)  # Joining list elements into a string

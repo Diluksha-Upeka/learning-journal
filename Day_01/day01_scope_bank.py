@@ -1,4 +1,4 @@
-#LEGB - Local, Enclosing, Global, Built-in
+# LEGB - Local, Enclosing, Global, Built-in
 
 bank_balance = 1000  # Global variable
 
@@ -40,7 +40,6 @@ print(f"Final bank balance: {bank_balance}")
 
 
 #enclosing scope example
-
 def outer_function():
     outer_var = "I'm from the outer function" 
 

@@ -9,12 +9,13 @@ modules_2 = modules_1  # Both variables point to the same list
 print(modules_1)
 print(modules_2)
 
+# Tuples
 tuple_1 = ('a', 'b', 'c', 'd', 'e')
 tuple_2 = tuple_1  # Both variables point to the same tuple
 print(tuple_1)
 print(tuple_2)
 
-# tuple_1[0] = 'z'  # This will raise an error because tuples are immutable
+# tuple_1[0] = 'z'  # This will raise an error because tuples are immutable (cannot be changed)
 
 # NO methods like append, insert, remove, pop, sort, reverse for tuples
 
@@ -23,6 +24,7 @@ print(sys.getsizeof(modules_1))  # Size of modules_1 in bytes - list has more ov
 print(sys.getsizeof(tuple_1))  # Size of tuple_1 in bytes - tuple has less overhead (80)
 
 # Speed comparison
+# Tuples are generally faster than lists for iteration and access due to their immutability
 lists_time =timeit.timeit(stmt = "modules = ['a', 'b', 'c', 'd', 'e']", number = 1000000)
 tuples_time = timeit.timeit(stmt = "tuples = ('a', 'b', 'c', 'd', 'e')", number = 1000000)
 
@@ -33,6 +35,7 @@ else:
 
 
 # SETS - Unordered collection of unique elements with no duplicates
+# Sets are mutable but do not maintain any order
 cs_courses = {'DSA', 'Python', 'Web Development', 'Python'}  # 'Python' will be stored only once
 print(cs_courses)
 
@@ -48,11 +51,11 @@ print(cs_courses.difference(bio_courses))  # elements in cs_courses but not in b
 print(bio_courses.difference(cs_courses))  # elements in bio_courses but not in cs
 
 # Empty list, tuple, set
-empty_list = []
-empty_list = list()
+empty_list = []  # This creates an empty list
+empty_list = list() # This also creates an empty list
 
-empty_tuple = ()
-empty_tuple = tuple()
+empty_tuple = () # This creates an empty tuple
+empty_tuple = tuple() # This also creates an empty tuple
 
-empty_set = {}  # This creates an empty dictionary, not a set
-empty_set = set()
+empty_set = {}  # This creates an empty dictionary, NOT A SET
+empty_set = set() # This creates an empty set
