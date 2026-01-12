@@ -33,6 +33,8 @@ This learning journal serves as:
 - Day 05 - Classes, Objects and Class Variables
 - Day 06 - Inheritance
 - Day 07 - Weekly Recap
+
+- Day 08 - Big O notation
 ---
 
-*Last updated: 11th of January*
+*Last updated: 12th of January*
