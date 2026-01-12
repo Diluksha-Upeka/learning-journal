@@ -139,3 +139,7 @@ def find_duplicates(arr):
 # - O(log n): Logarithmic space - recursive calls in binary search
 # - O(n²): Quadratic space - 2D arrays or matrices
 
+# WHY WE AVOID HIGH TIME COMPLEXITIES:
+# High time complexities (like O(n²), O(2^n)) can lead to significant slowdowns
+# as input size grows, making algorithms impractical for large datasets.
+
