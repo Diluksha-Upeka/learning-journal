@@ -35,6 +35,7 @@ This learning journal serves as:
 - Day 07 - Weekly Recap
 
 - Day 08 - Big O notation
+- Day 09 - Arrays and 2 pointers
 ---
 
-*Last updated: 12th of January*
+*Last updated: 13th of January*
