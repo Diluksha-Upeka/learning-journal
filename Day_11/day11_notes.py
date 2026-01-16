@@ -40,3 +40,16 @@
 #     "password": "password123"
 # }
 
+# REQUEST AND RESPONSE CYCLE Understanding
+
+# Most asked questions:
+# 1. What is a request-response cycle?
+# A request-response cycle is the process by which a client (like a web browser) sends a request to a server, and the server processes that request and sends back a response. This cycle is fundamental to how web applications function.
+
+# 2. How do APIs fit into this cycle?
+# APIs (Application Programming Interfaces) are sets of rules that allow different software applications to communicate with
+# each other. In the context of web applications, APIs define how clients can request data or services from a server and how the server should respond.
+
+
+# 3. What are the common HTTP methods used in APIs?
+# The most common HTTP methods used in APIs are GET (to retrieve data), POST (to create new data), PUT (to update existing data), and DELETE (to remove data).  
