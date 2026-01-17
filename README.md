@@ -36,6 +36,9 @@ This learning journal serves as:
 
 - Day 08 - Big O notation
 - Day 09 - Arrays and 2 pointers
+- Day 10 - Hash map collisions
+- Day 11 - REST API and HTTP status codes
+- Day 12 - Flask server
 ---
 
 *Last updated: 13th of January*
