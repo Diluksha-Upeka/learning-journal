@@ -1,0 +1,11 @@
+{
+    "id": 101,
+    "name": "John Doe",
+    "marks": [
+        85,
+        90,
+        78,
+        95
+    ],
+    "is_active": true
+}
