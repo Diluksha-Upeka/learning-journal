@@ -29,8 +29,8 @@ student_data = {
 
 # Save data to a JSON file
 print(f"Saving data to {filename}...")
-with open(filename, 'w') as json_file:
-    json.dump(student_data, json_file, indent=4)
+with open(filename, 'w') as json_file: # Open the file in write mode
+    json.dump(student_data, json_file, indent=4) # Serialize Converts dict to JSON and write to file
 print("Data saved successfully.")
 
 # Simulate restarting the program
@@ -40,8 +40,8 @@ student_data = None
 # Read data from the JSON file
 if os.path.exists(filename):
     print(f"Loading data from {filename}...")
-    with open(filename, 'r') as file:
-        loaded_data = json.load(file)
+    with open(filename, 'r') as file: # Open the file in read mode
+        loaded_data = json.load(file) # Deserialize JSON text to Python dict
     print("Data loaded successfully.")
     print(f" Type: {type(loaded_data)}")
 
