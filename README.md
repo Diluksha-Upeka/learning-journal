@@ -39,6 +39,7 @@ This learning journal serves as:
 - Day 10 - Hash map collisions
 - Day 11 - REST API and HTTP status codes
 - Day 12 - Flask server
+- Day 13 - JSON
 ---
 
-*Last updated: 13th of January*
+*Last updated: 18th of January*
