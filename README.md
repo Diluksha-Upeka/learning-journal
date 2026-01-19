@@ -27,6 +27,7 @@ This learning journal serves as:
 
 ## Recent Entries
 
+- Day 01 - Scope
 - Day 02 - Lists, Tuples, and Sets
 - Day 03 - Dictionaries
 - Day 04 - Functions, *args and **kwargs
@@ -40,6 +41,7 @@ This learning journal serves as:
 - Day 11 - REST API and HTTP status codes
 - Day 12 - Flask server
 - Day 13 - JSON
+- Day 14 - Recap with a mini project
 ---
 
-*Last updated: 18th of January*
+*Last updated: 19th of January*
