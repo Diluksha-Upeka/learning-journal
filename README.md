@@ -44,6 +44,7 @@ This learning journal serves as:
 - Day 14 - Recap with a mini project
 
 - Day 15 - ML intro
+- Day 16 - Pandas
 ---
 
-*Last updated: 21st of January*
+*Last updated: 22nd of January*
