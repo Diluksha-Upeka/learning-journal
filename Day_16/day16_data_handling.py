@@ -1,50 +1,42 @@
-# PANDAS 
-# If data is dirty -> model will fail silently
-# Data cleaning is the most important part of data science
+import pandas as pd
+import numpy as np
 
-# DATA FRAME = EXCEL SHEET = TABLE
-# Series = COLUMN
-# Index = Row number (0,1,2,...)
+# Create a data set
+data = {
+    'Student_ID': [1001, 1002, 1003, 1004, 1005],
+    'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eva'],
+    'Marks': [85, 92, np.nan, 88, 76], # Missing value
+    'Study_Hours': [4, 9, 2, 1, 3]
+}
 
-# pandas always thinks in columns (series)
+# Load into a DataFrame
+df = pd.DataFrame(data)
 
-# NaN = Not a Number = missing value
-# Why is it dangerous?
-# 1. If you have NaN in your data, many algorithms will fail
+print("Original DataFrame:")
+print(df)
 
-# Creating a DataFrame - a 2d labeled data structure optimized for column-wise operations
-# df = pd.DataFrame(data)
+# Analyze the DataFrame
+print("\nStatistical Summary:")
+print(df.describe())
 
-# Always inspect your data after loading it
-# df.head()  # first 5 rows
-# print(df) - prints entire dataframe
-# df.info() - summary of dataframe
-# df.describe() - statistical summary of numerical columns
-# df.columns - list of column names
-# df.shape - (num_rows, num_columns)
-# df.dtypes - data types of each column
+# Cleaning data
+print("\nFilling missing values in 'Marks' with the mean:")
 
-# Cleaning Data
-# Missing values with class average
-# df['column_name'] = df['column_name'].fillna(df['column_name'].mean()
+# Calculate the mean of 'Marks' column
+avg_mark = df['Marks'].mean()
+print(f"Average Marks: {avg_mark}")
 
-# Find NaN -> Decide strategy -> Replace
+# Fill NaN values with the average
+df['Marks'] = df['Marks'].fillna(avg_mark)
 
-# FILTERING DATA
-# df_filtered = df[df['column_name'] > value]
-# Boolean masking
-# No loops, no if statements, pure vectorized speed
+print("\nDataFrame after filling missing values:")
+print(df)
 
-# COLUMN SELECTION - DATA SHAPE MATTERS
-# DataFrame = 2D table ex [[Marks]] = 85, 90, 78, ...
-# passed_students[['name', 'score']]  # double brackets to keep it as DataFrame (table)
-# Series = 1D [85, 90, 78, ...]
-# passed_students['name']  # single brackets returns Series (column)
+# Filtering data: Students who scored more than 50 marks
+print("\nStudents who scored more than 50 marks:")
+passed_students = df[df['Marks'] > 50]
+print(passed_students[['Name', 'Marks']])
 
-# SAVING DATA
-# df.to_csv('cleaned_data.csv', index=False)
-# index=False to avoid saving the index as a separate column
-
-# REAL ML PIPELINE
-
-# Raw Data -> Pandas Cleaning -> Clean CSV -> Feature Engineering -> Model Training
+# Saving cleaned data to a new CSV file
+df.to_csv('cleaned_student_data.csv', index=False)
+print("\nCleaned data saved to 'cleaned_student_data.csv'")
