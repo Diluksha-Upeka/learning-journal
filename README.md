@@ -46,6 +46,7 @@ This learning journal serves as:
 - Day 15 - ML intro
 - Day 16 - Pandas
 - Day 17 - Linear Regression
+- Day 18 - Logistic Regression
 ---
 
-*Last updated: 24th of January*
+*Last updated: 25th of January*
