@@ -47,6 +47,7 @@ This learning journal serves as:
 - Day 16 - Pandas
 - Day 17 - Linear Regression
 - Day 18 - Logistic Regression
+- Day 19 - Scaling and Pipelines
 ---
 
-*Last updated: 25th of January*
+*Last updated: 26th of January*
