@@ -48,6 +48,7 @@ This learning journal serves as:
 - Day 17 - Linear Regression
 - Day 18 - Logistic Regression
 - Day 19 - Scaling and Pipelines
+- Day 20 - Saving Models with Joblib
 ---
 
 *Last updated: 26th of January*
