@@ -51,6 +51,8 @@ This learning journal serves as:
 - Day 20 - Saving Models with Joblib [View Code](./Day_20/day20_save_model.py) 
          - Saved Model: [View Model](house_price_model.pkl)
 - Day 21 - End-to-End MLOps Pipeline & Deployment [Salary Prediction App](https://salary-prediction-mlops.onrender.com/)
+
+- Day 22 - Documentation of the Project
 ---
 
-*Last updated: 28th of January*
+*Last updated: 29th of January*
