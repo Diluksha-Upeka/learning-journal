@@ -54,6 +54,7 @@ This learning journal serves as:
 
 - Day 22 - Documentation of the Project
 - Day 23 - System Design Basics(Scalability, Load Balancing) [View Code](./Day_23/day_system_design.md)
+- Day 24 - Behavioral Interview STAR Method Prep [View Code](./Day_24/INTERVIEW_PREP.md)
 ---
 
 *Last updated: 31st of January*
