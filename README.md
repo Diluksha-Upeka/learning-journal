@@ -53,6 +53,7 @@ This learning journal serves as:
 - Day 21 - End-to-End MLOps Pipeline & Deployment [Salary Prediction App](https://salary-prediction-mlops.onrender.com/)
 
 - Day 22 - Documentation of the Project
+- Day 23 - System Design Basics(Scalability, Load Balancing)
 ---
 
-*Last updated: 29th of January*
+*Last updated: 31st of January*
