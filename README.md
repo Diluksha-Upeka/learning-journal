@@ -56,7 +56,7 @@ This learning journal serves as:
 - Day 23 - System Design Basics(Scalability, Load Balancing) [View Code](./Day_23/day_system_design.md)
 - Day 24 - Behavioral Interview STAR Method Prep [View Code](./Day_24/INTERVIEW_PREP.md)
 - Day 25 - Containerization with Docker [View Code](./Day_25/Dockerfile)
-- Day 26 - Testing and Github Actions [View Code](In another repo:https://github.com/Diluksha-Upeka/salary-prediction-mlops.git)
+- Day 26 - Testing and Github Actions [View Code](https://github.com/Diluksha-Upeka/salary-prediction-mlops.git)
 ---
 
 *Last updated: 02nd of February*
