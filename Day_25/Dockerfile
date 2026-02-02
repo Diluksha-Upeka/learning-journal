@@ -26,3 +26,15 @@ CMD ["python", "app.py"]
 # Example: CMD ["node", "server.js"]
 # Example: CMD ["java", "-jar", "app.jar"]
 # Example: CMD ["npm", "start"]
+
+
+# 1. Build the image: (recipe)
+#    docker build -t my-web-app .
+# Explanation:
+#    docker build -t <image_name> .
+
+
+# 2. Run a container from the image: (Actual cake)
+#    docker run -p 5000:5000 my-web-app
+# Explanation:
+#    docker run -p <host_port>:<container_port> <image_name>
