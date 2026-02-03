@@ -11,7 +11,7 @@ def traditional_converter(km):
 
 # MACHINE LEARNING EXAMPLE
 def simple_ml_training(inputs, outputs):
-    print(f" Training on data...")
+    print(" Training on data...")
     weight = 0.5  # Dummy weight for illustration
     step_size = 0.000001  # Dummy step size for illustration
 

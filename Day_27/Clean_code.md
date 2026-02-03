@@ -11,6 +11,7 @@ pip install black ruff mypy pytest pre-commit
 ## FORMATTING (Black)
 
 ```bash
+pip install black       # Install Black
 black .                # Format all files
 black --check .        # Check only
 ```
@@ -19,7 +20,7 @@ black --check .        # Check only
 
 ---
 
-## 2️⃣ NAMING
+## NAMING
 
 | Type | Convention | Example |
 |------|------------|---------|
@@ -34,10 +35,10 @@ black --check .        # Check only
 
 ---
 
-## 3️⃣ FUNCTIONS
+## FUNCTIONS
 
 ```python
-# ✅ Good - one responsibility
+# Good - one responsibility
 def read_data():
     """Load data from CSV file."""
     ...
@@ -54,7 +55,7 @@ def clean_data(raw_data):
 
 ---
 
-## 4️⃣ DOCSTRINGS
+## DOCSTRINGS
 
 ```python
 def calculate_tax(price: float, rate: float) -> float:
@@ -75,7 +76,8 @@ def calculate_tax(price: float, rate: float) -> float:
 
 ---
 
-## 5️⃣ LINTING (Ruff)
+## LINTING (Ruff) 
+Linting means checking code for style and errors.
 
 ```bash
 ruff check .           # Check for issues
@@ -86,7 +88,7 @@ ruff check --fix .     # Auto-fix issues
 
 ---
 
-## 6️⃣ TYPE HINTS
+## TYPE HINTS
 
 ```python
 from typing import List, Dict, Optional
@@ -108,10 +110,10 @@ mypy .
 
 ---
 
-## 7️⃣ ERROR HANDLING
+## ERROR HANDLING
 
 ```python
-# ✅ Good - controlled failure
+# Good - controlled failure
 try:
     result = a / b
 except ZeroDivisionError:
@@ -126,7 +128,7 @@ except ZeroDivisionError:
 
 ---
 
-## 8️⃣ LOGGING
+## LOGGING
 
 ```python
 import logging
@@ -144,7 +146,7 @@ logging.critical("Database crashed")
 
 ---
 
-## 9️⃣ PROJECT STRUCTURE
+## PROJECT STRUCTURE
 
 ```
 my_project/
@@ -167,7 +169,7 @@ my_project/
 
 ---
 
-## 🔟 GIT COMMITS
+## GIT COMMITS
 
 ```bash
 # ❌ Bad
@@ -183,7 +185,7 @@ git commit -m "refactor: Extract data processing module"
 
 ---
 
-## 🎯 PRE-COMMIT HOOKS
+## PRE-COMMIT HOOKS
 
 Create `.pre-commit-config.yaml`:
 ```yaml
@@ -207,19 +209,19 @@ pre-commit install
 
 ---
 
-## ✅ MUST REMEMBER (7 THINGS)
+## MUST REMEMBER (7 THINGS)
 
-1. ✅ **Use Black always** → `black .`
-2. ✅ **Name things clearly** → No `x`, `temp`, `data1`
-3. ✅ **Small functions** → One responsibility
-4. ✅ **Fix linter warnings** → `ruff check --fix .`
-5. ✅ **Use docstrings** → Explain what functions do
-6. ✅ **Handle errors** → `try/except` for risky code
-7. ✅ **Clean commits** → `feat: Add feature name`
+1. **Use Black always** → `black .`
+2. **Name things clearly** → No `x`, `temp`, `data1`
+3. **Small functions** → One responsibility
+4. **Fix linter warnings** → `ruff check --fix .`
+5. **Use docstrings** → Explain what functions do
+6. **Handle errors** → `try/except` for risky code
+7. **Clean commits** → `feat: Add feature name`
 
 ---
 
-## 🚀 QUICK START (New Project)
+## QUICK START (New Project)
 
 ```bash
 # Setup
@@ -242,7 +244,7 @@ ruff check --fix .
 
 ---
 
-## 💡 KEY INSIGHTS
+## KEY INSIGHTS
 
 **Professional Code = Readable + Predictable + Automated + Boring**
 

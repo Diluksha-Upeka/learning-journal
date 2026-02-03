@@ -1,6 +1,5 @@
 # Messy Code Example
 
-import json, os
 
 
 def calculate(x, y):

@@ -1,7 +1,6 @@
 # DAY 11: HTTP API SIMULATION
 # API = Application Programming Interface
 
-import json
 
 
 class MockServer:
