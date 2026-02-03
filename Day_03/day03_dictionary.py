@@ -4,11 +4,7 @@
 # Similar to hash maps or associative arrays in other languages.
 
 # Creating a dictionary
-student = {
-    "name": "John",
-    "age": 21,
-    "courses": ["Math", "CompSci"] # List as a value
-}
+student = {"name": "John", "age": 21, "courses": ["Math", "CompSci"]}  # List as a value
 print(student)
 
 # Accessing values
@@ -21,7 +17,9 @@ print(student.get("gender", "Not Specified"))  # Output: Not Specified
 student["phone"] = "555-5555"  # Adding a new key-value pair
 student["name"] = "Jane"  # Updating an existing key
 
-student.update({"age": 22, "address": "123 Main St"})  # Updating multiple key-value pairs using update()
+student.update(
+    {"age": 22, "address": "123 Main St"}
+)  # Updating multiple key-value pairs using update()
 print(student)
 
 # Removing values
@@ -32,10 +30,14 @@ print(student)
 
 print(len(student))  # Output: Number of key-value pairs in the dictionary
 # Outputs the values, keys, and key-value pairs respectively
-print(student.values())  # Output: dict_values(['Jane', ['Math', 'CompSci'], '123 Main St'])
+print(
+    student.values()
+)  # Output: dict_values(['Jane', ['Math', 'CompSci'], '123 Main St'])
 print(student.keys())  # Output: dict_keys(['name', 'courses', 'address'])
 # Outputs the key-value pairs
-print(student.items())  # Output: dict_items([('name', 'Jane'), ('courses', ['Math', 'CompSci']), ('address', '123 Main St')])
+print(
+    student.items()
+)  # Output: dict_items([('name', 'Jane'), ('courses', ['Math', 'CompSci']), ('address', '123 Main St')])
 
 # Looping through a dictionary
 for key, value in student.items():

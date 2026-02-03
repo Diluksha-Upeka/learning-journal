@@ -29,14 +29,14 @@
 # Creating a User (POST /users):
 # {
 #     "name": "John Doe",
-#     "email": "jdoe@ex.com",   
+#     "email": "jdoe@ex.com",
 #     "password": "password123"
 # }
 
 # Updating a User (PUT /users/{id}):
 # {
 #     "name": "John Doe",
-#     "email": "jdoe@ex.com",   
+#     "email": "jdoe@ex.com",
 #     "password": "password123"
 # }
 
@@ -52,4 +52,4 @@
 
 
 # 3. What are the common HTTP methods used in APIs?
-# The most common HTTP methods used in APIs are GET (to retrieve data), POST (to create new data), PUT (to update existing data), and DELETE (to remove data).  
+# The most common HTTP methods used in APIs are GET (to retrieve data), POST (to create new data), PUT (to update existing data), and DELETE (to remove data).

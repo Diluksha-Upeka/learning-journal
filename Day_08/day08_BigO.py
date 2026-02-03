@@ -5,16 +5,16 @@
 # Arrays
 numbers = [10, 20, 30, 40, 50]
 numbers.append(60)  # Adding an element to the end of the array
-numbers.pop()        # Removing the last element from the array
-numbers[2]        # Accessing the third element in the array
+numbers.pop()  # Removing the last element from the array
+numbers[2]  # Accessing the third element in the array
 
 # Dictionaries
 person = {}
-person['name'] = 'Alice'  # Adding a key-value pair
-print(person['name'])    # Accessing a value by key
-del person['name']       # Removing a key-value pair
-person.pop('age', None)  # Removing a key-value pair with default
-person.get('name')       # Accessing a value by key with default
+person["name"] = "Alice"  # Adding a key-value pair
+print(person["name"])  # Accessing a value by key
+del person["name"]  # Removing a key-value pair
+person.pop("age", None)  # Removing a key-value pair with default
+person.get("name")  # Accessing a value by key with default
 
 # O(n)
 # Linear Time Complexity
@@ -31,12 +31,13 @@ for num in numbers:
 print(sum_numbers)
 
 numbers.insert(0, 5)  # Inserting an element at the beginning of the array
-numbers.remove(30)    # Removing a specific element from the array
+numbers.remove(30)  # Removing a specific element from the array
 print(10 in numbers)  # Checking if an element exists in the array
 
 # O(log n)
 # Logarithmic Time Complexity
 # Following operations are examples of O(log n) time complexity:
+
 
 # Binary search on a sorted array
 def binary_search(arr, target):
@@ -51,8 +52,11 @@ def binary_search(arr, target):
             right = mid - 1
     return -1
 
+
 sorted_numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-result = binary_search(sorted_numbers, 70)  # O(log n) - divides search space in half each time
+result = binary_search(
+    sorted_numbers, 70
+)  # O(log n) - divides search space in half each time
 
 # O(n log n)
 # Linearithmic Time Complexity
@@ -60,21 +64,23 @@ result = binary_search(sorted_numbers, 70)  # O(log n) - divides search space in
 
 numbers = [64, 34, 25, 12, 22, 11, 90]
 
+
 # Merge Sort
 def merge_sort(arr):
     if len(arr) <= 1:
         return arr
-    
+
     mid = len(arr) // 2
     left = merge_sort(arr[:mid])
     right = merge_sort(arr[mid:])
-    
+
     return merge(left, right)
+
 
 def merge(left, right):
     result = []
     i = j = 0
-    
+
     while i < len(left) and j < len(right):
         if left[i] <= right[j]:
             result.append(left[i])
@@ -82,10 +88,11 @@ def merge(left, right):
         else:
             result.append(right[j])
             j += 1
-    
+
     result.extend(left[i:])
     result.extend(right[j:])
     return result
+
 
 sorted_numbers = merge_sort(numbers)  # O(n log n) - efficient sorting algorithm
 
@@ -99,6 +106,7 @@ sorted_list = sorted(numbers)  # Also O(n log n)
 
 numbers = [64, 34, 25, 12, 22, 11, 90]
 
+
 # Bubble Sort
 def bubble_sort(arr):
     n = len(arr)
@@ -108,12 +116,14 @@ def bubble_sort(arr):
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
     return arr
 
+
 bubble_sort(numbers.copy())  # O(n²) - nested loops through the array
 
 # Nested loops to find all pairs
 for i in range(len(numbers)):
     for j in range(len(numbers)):
         print(f"Pair: ({numbers[i]}, {numbers[j]})")  # O(n²)
+
 
 # Finding duplicates with nested loops
 def find_duplicates(arr):
@@ -142,4 +152,3 @@ def find_duplicates(arr):
 # WHY WE AVOID HIGH TIME COMPLEXITIES:
 # High time complexities (like O(n²), O(2^n)) can lead to significant slowdowns
 # as input size grows, making algorithms impractical for large datasets.
-

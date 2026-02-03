@@ -2,6 +2,7 @@
 
 import numpy as np  # Math calculator for python
 from sklearn.linear_model import LinearRegression
+
 # sklearn = AI / ML toolbox
 # linear_model = Models based on lines
 # LinearRegression = The brain we will train

@@ -3,11 +3,13 @@ from flask import Flask, jsonify
 # Create the server object
 app = Flask(__name__)
 
+
 # ROUTE 1 - Home Route
 # When user goes to http://localhost:5000/
 @app.route("/")
 def home():
-    return "Welcome to the Home Page!"  
+    return "Welcome to the Home Page!"
+
 
 # ROUTE 2 - The API Route (Data)
 # When user goes to http://localhost:5000/api
@@ -16,7 +18,7 @@ def get_data():
     data = {
         "name": "Flask API",
         "version": "1.0",
-        "description": "This is a simple Flask API"
+        "description": "This is a simple Flask API",
     }
     return jsonify(data)  # Return data as JSON
     # jsonify() converts the dictionary to a JSON response

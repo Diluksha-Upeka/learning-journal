@@ -1,4 +1,4 @@
-# CLASSIFICATION 
+# CLASSIFICATION
 
 # Linear Regression - HOW MUCH
 # Logistic Regression - YES or NO (0 or 1)
@@ -6,7 +6,7 @@
 # Logistic regression first calculates the probability, then applies the threshold to decide the class
 
 # SIGMOID FUNCTION
-#--------------------------
+# --------------------------
 # Sigmoid(z) = 1 / (1 + e^(-z))
 
 # Input value (z) can be any real number

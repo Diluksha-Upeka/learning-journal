@@ -6,15 +6,19 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
-preprocesor = ColumnTransformer([
-    ('num', StandardScaler(), ['Age', 'Salary']),   # Numerical features
-    ('cat', OneHotEncoder(), ['Gender'])            # Categorical feature
-])
+preprocesor = ColumnTransformer(
+    [
+        ("num", StandardScaler(), ["Age", "Salary"]),  # Numerical features
+        ("cat", OneHotEncoder(), ["Gender"]),  # Categorical feature
+    ]
+)
 
-pipeline = Pipeline([
-    ('preprocessor', preprocesor),                  # Step 1: Preprocessing
-    ('knn_classifier', KNeighborsClassifier())      # Step 2: KNN Classifier
-])
+pipeline = Pipeline(
+    [
+        ("preprocessor", preprocesor),  # Step 1: Preprocessing
+        ("knn_classifier", KNeighborsClassifier()),  # Step 2: KNN Classifier
+    ]
+)
 
 pipeline.fit(X_train, y_train)
 prediction = pipeline.predict(X_new)
@@ -25,4 +29,4 @@ prediction = pipeline.predict(X_new)
 
 pipeline.fit(X_train, y_train)
 pipeline.predict(X_new)
-pipeline.named_steps['preprocessor']
+pipeline.named_steps["preprocessor"]

@@ -20,17 +20,14 @@ import os
 filename = "student_db.json"
 
 # The data (Python dictionary)
-student_data = {
-    "id" : 101,
-    "name" : "John Doe",
-    "marks" : [85, 90, 78],
-    "is_active" : True
-}
+student_data = {"id": 101, "name": "John Doe", "marks": [85, 90, 78], "is_active": True}
 
 # Save data to a JSON file
 print(f"Saving data to {filename}...")
-with open(filename, 'w') as json_file: # Open the file in write mode
-    json.dump(student_data, json_file, indent=4) # Serialize Converts dict to JSON and write to file
+with open(filename, "w") as json_file:  # Open the file in write mode
+    json.dump(
+        student_data, json_file, indent=4
+    )  # Serialize Converts dict to JSON and write to file
 print("Data saved successfully.")
 
 # Simulate restarting the program
@@ -40,17 +37,17 @@ student_data = None
 # Read data from the JSON file
 if os.path.exists(filename):
     print(f"Loading data from {filename}...")
-    with open(filename, 'r') as file: # Open the file in read mode
-        loaded_data = json.load(file) # Deserialize JSON text to Python dict
+    with open(filename, "r") as file:  # Open the file in read mode
+        loaded_data = json.load(file)  # Deserialize JSON text to Python dict
     print("Data loaded successfully.")
     print(f" Type: {type(loaded_data)}")
 
     # Update the data
     print("\n Updating student data...")
-    loaded_data['marks'].append(95)  # Adding a new mark
+    loaded_data["marks"].append(95)  # Adding a new mark
 
     # Save it back to the JSON file
-    with open(filename, 'w') as json_file:
+    with open(filename, "w") as json_file:
         json.dump(loaded_data, json_file, indent=4)
     print("Data updated and saved successfully.")
 else:

@@ -1,4 +1,4 @@
-# PANDAS 
+# PANDAS
 # If data is dirty -> model will fail silently
 # Data cleaning is the most important part of data science
 

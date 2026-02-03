@@ -4,18 +4,13 @@ from flask import Flask, jsonify, request
 import json
 import os
 
-app = Flask(__name__) # Starts a web server
+app = Flask(__name__)  # Starts a web server
 
 # Store DB file next to this script (so it works no matter where you run it from)
 BASE_DIR = os.path.dirname(__file__)
 DB_FILE = os.path.join(BASE_DIR, "school_db.json")
 
-student_data = {
-    "id" : 101,
-    "name" : "John Doe",
-    "marks" : [85, 90, 78],
-    "is_active" : True
-}
+student_data = {"id": 101, "name": "John Doe", "marks": [85, 90, 78], "is_active": True}
 
 
 def seed_db_if_empty():

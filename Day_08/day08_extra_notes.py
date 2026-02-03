@@ -1,4 +1,4 @@
-# COMMON SEARCHING ALGORITHMS 
+# COMMON SEARCHING ALGORITHMS
 
 # 1. LINEAR SEARCH (Sequential Search)
 
@@ -23,7 +23,7 @@
 #   - Most asked searching algorithm in interviews
 
 
-# COMMON SORTING ALGORITHMS 
+# COMMON SORTING ALGORITHMS
 
 
 # 1. BUBBLE SORT
@@ -68,7 +68,7 @@
 # When to use: Large datasets, when stability needed, linked lists
 # Pros: Guaranteed O(n log n), stable, predictable performance
 # Cons: Requires extra space, slower than quicksort in practice
-# Interview Notes: 
+# Interview Notes:
 #   - Go-to algorithm for guaranteed O(n log n)
 #   - Divide-and-conquer paradigm
 #   - Preferred for linked lists

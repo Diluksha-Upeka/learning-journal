@@ -1,9 +1,11 @@
 # INHERITANCE IN PYTHON
 
+
 # Base class
 class Employee:
 
     raise_amount = 1.05
+
     def __init__(self, first, last, salary):
         self.first = first
         self.last = last
@@ -11,9 +13,10 @@ class Employee:
 
     def full_name(self):
         return f"{self.first} {self.last}"
-    
+
     def apply_raise(self):
         self.salary = int(self.salary * self.raise_amount)
+
 
 # Derived class
 class Developer(Employee):
@@ -22,9 +25,10 @@ class Developer(Employee):
     # Raise amount is overridden to 10% for developers
 
     def __init__(self, first, last, salary, prog_lang=None):
-        super().__init__(first, last, salary) # Call the constructor of the base class
+        super().__init__(first, last, salary)  # Call the constructor of the base class
         # Employee.__init__(self, first, last, salary) - DRY principle
         self.prog_lang = prog_lang
+
 
 class Manager(Employee):
     def __init__(self, first, last, salary, employees=None):
@@ -33,6 +37,7 @@ class Manager(Employee):
             self.employees = []
         else:
             self.employees = employees
+
     def add_employee(self, emp):
         if emp not in self.employees:
             self.employees.append(emp)
@@ -45,7 +50,8 @@ class Manager(Employee):
         for emp in self.employees:
             print("-->", emp.full_name())
 
-dev_1 = Developer("John", "Doe", 80000) 
+
+dev_1 = Developer("John", "Doe", 80000)
 dev_2 = Developer("Jane", "Smith", 90000)
 dev_3 = Developer("Alice", "Johnson", 95000, prog_lang="Python")
 
@@ -73,5 +79,5 @@ mgr_1.print_employees()  # Output: --> Jane Smith
 # print(isinstance(mgr_1, Developer))  # False
 
 # print(issubclass(Manager, Employee))  # True
-# print(issubclass(Developer, Employee))  # True    
+# print(issubclass(Developer, Employee))  # True
 # print(issubclass(Manager, Developer))  # False
