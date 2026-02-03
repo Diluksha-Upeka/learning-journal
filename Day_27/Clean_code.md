@@ -1,0 +1,257 @@
+# CLEAN CODE — QUICK REFERENCE
+
+## ESSENTIAL TOOLS
+
+```bash
+pip install black ruff mypy pytest pre-commit
+```
+
+---
+
+## FORMATTING (Black)
+
+```bash
+black .                # Format all files
+black --check .        # Check only
+```
+
+**Rule:** Let Black decide. Don't argue about style.
+
+---
+
+## 2️⃣ NAMING
+
+| Type | Convention | Example |
+|------|------------|---------|
+| Variables | `snake_case` | `user_name`, `total_price` |
+| Functions | `snake_case` + verb | `calculate_tax()`, `fetch_data()` |
+| Classes | `PascalCase` | `UserAccount`, `DataProcessor` |
+| Constants | `UPPER_SNAKE_CASE` | `MAX_SIZE`, `API_KEY` |
+
+**Avoid:** `a`, `x`, `temp`, `data1`, `usr`
+
+**Rule:** If you need a comment to explain a name, the name is bad.
+
+---
+
+## 3️⃣ FUNCTIONS
+
+```python
+# ✅ Good - one responsibility
+def read_data():
+    """Load data from CSV file."""
+    ...
+
+def clean_data(raw_data):
+    """Remove nulls and duplicates."""
+    ...
+```
+
+**Rules:**
+- One function = one responsibility
+- 10-20 lines max
+- Return early (avoid deep nesting)
+
+---
+
+## 4️⃣ DOCSTRINGS
+
+```python
+def calculate_tax(price: float, rate: float) -> float:
+    """
+    Calculate tax amount based on price and rate.
+    
+    Args:
+        price: Base price before tax
+        rate: Tax rate as decimal (0.15 for 15%)
+    
+    Returns:
+        Tax amount
+    """
+    return price * rate
+```
+
+**Rule:** Comments explain WHY, docstrings explain WHAT.
+
+---
+
+## 5️⃣ LINTING (Ruff)
+
+```bash
+ruff check .           # Check for issues
+ruff check --fix .     # Auto-fix issues
+```
+
+**Rule:** If a linter complains, fix it. Don't ignore warnings.
+
+---
+
+## 6️⃣ TYPE HINTS
+
+```python
+from typing import List, Dict, Optional
+
+def greet(name: str) -> str:
+    return f"Hello, {name}"
+
+def process_data(data: List[int]) -> Dict[str, float]:
+    return {"average": sum(data) / len(data)}
+
+# Optional (can be None)
+email: Optional[str] = None
+```
+
+**Check types:**
+```bash
+mypy .
+```
+
+---
+
+## 7️⃣ ERROR HANDLING
+
+```python
+# ✅ Good - controlled failure
+try:
+    result = a / b
+except ZeroDivisionError:
+    result = 0
+    logging.error("Division by zero")
+```
+
+**Rules:**
+- Catch specific exceptions
+- Never use empty `except:`
+- Log errors, don't just print
+
+---
+
+## 8️⃣ LOGGING
+
+```python
+import logging
+
+logging.basicConfig(level=logging.INFO)
+
+logging.debug("Variable x = 5")
+logging.info("Training started")
+logging.warning("Low memory")
+logging.error("Failed to load file")
+logging.critical("Database crashed")
+```
+
+**Rule:** `print()` is for learning. `logging` is for work.
+
+---
+
+## 9️⃣ PROJECT STRUCTURE
+
+```
+my_project/
+├── src/
+│   ├── __init__.py
+│   └── main.py
+├── tests/
+│   └── test_main.py
+├── data/
+├── .gitignore
+├── README.md
+├── requirements.txt
+└── pyproject.toml
+```
+
+**Essential files:**
+- `requirements.txt` — dependencies
+- `README.md` — project description
+- `.gitignore` — ignore patterns
+
+---
+
+## 🔟 GIT COMMITS
+
+```bash
+# ❌ Bad
+git commit -m "update"
+
+# ✅ Good
+git commit -m "feat: Add user authentication"
+git commit -m "fix: Resolve division by zero"
+git commit -m "refactor: Extract data processing module"
+```
+
+**Types:** feat, fix, refactor, docs, style, test, chore
+
+---
+
+## 🎯 PRE-COMMIT HOOKS
+
+Create `.pre-commit-config.yaml`:
+```yaml
+repos:
+  - repo: https://github.com/psf/black
+    rev: 23.3.0
+    hooks:
+      - id: black
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.0.270
+    hooks:
+      - id: ruff
+        args: [--fix, --exit-non-zero-on-fix]
+```
+
+Install:
+```bash
+pre-commit install
+```
+
+---
+
+## ✅ MUST REMEMBER (7 THINGS)
+
+1. ✅ **Use Black always** → `black .`
+2. ✅ **Name things clearly** → No `x`, `temp`, `data1`
+3. ✅ **Small functions** → One responsibility
+4. ✅ **Fix linter warnings** → `ruff check --fix .`
+5. ✅ **Use docstrings** → Explain what functions do
+6. ✅ **Handle errors** → `try/except` for risky code
+7. ✅ **Clean commits** → `feat: Add feature name`
+
+---
+
+## 🚀 QUICK START (New Project)
+
+```bash
+# Setup
+python -m venv venv
+venv\Scripts\activate
+pip install black ruff mypy pytest pre-commit
+
+# Git
+git init
+git add .
+git commit -m "Initial commit"
+
+# Pre-commit
+pre-commit install
+
+# Format & Check
+black .
+ruff check --fix .
+```
+
+---
+
+## 💡 KEY INSIGHTS
+
+**Professional Code = Readable + Predictable + Automated + Boring**
+
+1. Code is read 10x more than written → optimize for reading
+2. Good code needs no comments → self-explanatory names
+3. Automate everything → don't rely on memory
+4. Consistency > perfection → follow team standards
+5. Boring code is good code → no surprises
+
+---
+
+**Updated:** Feb 3, 2026
