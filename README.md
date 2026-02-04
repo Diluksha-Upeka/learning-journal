@@ -58,6 +58,7 @@ This learning journal serves as:
 - Day 25 - Containerization with Docker [View Code](./Day_25/Dockerfile)
 - Day 26 - Testing and Github Actions [View Code](https://github.com/Diluksha-Upeka/salary-prediction-mlops.git)
 - Day 27 - Clean Code Principles [View Code](./Day_27/Clean_code.md)
+- Day 28 - Portfolio Website Improvement [View Code](https://diluksha-upeka.me/)
 ---
 
-*Last updated: 03rd of February*
+*Last updated: 04th of February*
