@@ -59,6 +59,8 @@ This learning journal serves as:
 - Day 26 - Testing and Github Actions [View Code](https://github.com/Diluksha-Upeka/salary-prediction-mlops.git)
 - Day 27 - Clean Code Principles [View Code](./Day_27/Clean_code.md)
 - Day 28 - Portfolio Website Improvement [View Code](https://diluksha-upeka.me/)
+
+- Day 29 - Technical interview Preparation [View Code](./Day_24/INTERVIEW_PREP.md)
 ---
 
-*Last updated: 04th of February*
+*Last updated: 05th of February*
